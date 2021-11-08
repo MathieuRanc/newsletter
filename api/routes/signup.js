@@ -4,6 +4,7 @@ var mysql = require('mysql');
 const bcrypt = require('bcrypt');
 
 router.post('/', async (req, res) => {
+	res.status(403).json({ success: false, error: 'signup disabled' });
 	// generate salt to hash password
 	const salt = await bcrypt.genSalt(10);
 	// now we set user password to hashed password
