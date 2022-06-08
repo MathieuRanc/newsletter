@@ -1,0 +1,17 @@
+{
+    "name": "mathieu/newsletter",
+    "autoload": {
+        "psr-4": {
+            "Mathieu\\Newsletter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mathieu Ranc",
+            "email": "dev@mathieuranc.fr"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
+}

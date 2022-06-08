@@ -1,0 +1,124 @@
+$blue: #0d10d1;
+$dark: #050a08;
+
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: space-between;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+input::placeholder,
+textarea {
+	font-family: 'Montserrat';
+}
+body {
+	background-color: $blue;
+}
+main {
+	background-color: #f8f8ff;
+	min-height: calc(100vh - 54.5px);
+	width: 100%;
+}
+
+h1 {
+	color: $blue;
+}
+
+form {
+	gap: 20px;
+	div {
+		display: flex;
+		flex-direction: column;
+	}
+}
+input,
+textarea,
+select {
+	border-radius: 10px;
+	padding: 10px;
+	border: none;
+	background-color: white;
+	box-shadow: 0px 0px 4px 0px #0d10d126;
+	// border: solid 1px $blue;
+}
+input[type='submit'] {
+	background-color: $blue;
+	color: white;
+	padding: 12px 30px;
+	border: none;
+	border-radius: 40px;
+	margin-left: auto;
+	cursor: pointer;
+}
+
+textarea {
+	resize: vertical;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+html.dark {
+	background-color: $dark;
+	* {
+		border-color: rgb(162, 216, 236);
+		background-color: $dark;
+		color: rgb(162, 216, 236);
+	}
+}
+
+.page {
+	display: flex;
+}
+
+input[type='submit'],
+input[type='button'],
+button {
+	font-size: 12px;
+}
+
+table {
+	border-collapse: collapse;
+	border: $blue solid 1px;
+	border-radius: 4px;
+	overflow: hidden;
+	background-color: white;
+	box-shadow: 0px 0px 4px 0px #0d10d126;
+	th,
+	td {
+		padding: 8px;
+		text-align: center;
+	}
+	th,
+	tr:nth-child(2n) {
+		background-color: #f8f8ff;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+// mobile
+@media (max-width: 768px) {
+	h1 {
+		margin-top: 60px;
+		font-size: 24px;
+	}
+	h2 {
+		font-size: 16px;
+	}
+	label {
+		font-size: 12px;
+	}
+}

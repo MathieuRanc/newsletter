@@ -50,6 +50,13 @@ const mail = async (req, res, emails) => {
 			}
 		);
 
+		console.log('Message sent: %s', info.messageId);
+		// Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
+		// Preview only available when sending through an Ethereal account
+		console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+		// Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+
 		// result.fail.push({ email: to, type: 'try' });
 	}
 	return result;
@@ -73,17 +80,7 @@ router.post('/', async (req, res, next) => {
 });
 
 router.post('/', async (req, res) => {
-	const emails = [
-		'dev@mathieuranc.fr',
-		'exemple@mathieuranc.fr',
-		'exemple@mathieuranc.fr',
-		'exemple@mathieuranc.fr',
-		'exemple@mathieuranc.fr',
-		'exemple@mathieuranc.fr',
-		'exemple@mathieuranc.fr',
-		'exemple@mathieuranc.fr',
-		'exemple@mathieuranc.fr',
-	];
+	const emails = ['dev@mathieuranc.fr'];
 
 	mail(req, res, emails).catch(console.error);
 

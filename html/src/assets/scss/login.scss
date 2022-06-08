@@ -1,0 +1,49 @@
+$blue: #0d10d1;
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	display: flex;
+	width: 100vw;
+	flex: 1;
+	> div.image {
+		flex: 1;
+		background-image: url('/assets/images/home.jpg');
+	}
+	> div.login {
+		display: flex;
+		flex-direction: column;
+		padding: 50px;
+		justify-content: center;
+		form {
+			width: 400px;
+		}
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	}
+}
+
+a {
+	color: $blue;
+	font-size: 14px;
+	text-decoration: none;
+	align-self: flex-end;
+}
+
+// mobile
+@media (max-width: 768px) {
+	main {
+		.image {
+			display: none;
+		}
+		> div.login {
+			width: 100%;
+			padding: 20px;
+			form {
+				width: 100%;
+			}
+		}
+	}
+}

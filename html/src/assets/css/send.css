@@ -1,0 +1,11 @@
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=send.css.map */

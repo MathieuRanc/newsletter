@@ -1,0 +1,33 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+main form > div {
+  gap: 8px;
+}
+main .forgot div {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  background-color: #0d10d1;
+  color: white;
+  font-weight: 400;
+  padding: 12px 30px;
+  border-radius: 40px;
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=forgot.css.map */

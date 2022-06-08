@@ -1,0 +1,11 @@
+# Folders
+/node_modules/
+/vendor/
+/src/uploads/*
+
+# Files
+*.lock
+*.sh
+.env
+
+composer.phar
