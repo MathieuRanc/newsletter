@@ -1,0 +1,62 @@
+$blue: #0d10d1;
+
+@import './gallery.scss';
+
+main {
+	padding: 20px;
+}
+
+.wrapper_projects {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.project {
+	display: block;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background-color: rgba(0, 0, 0, 0.05);
+	padding: 10px;
+	border-radius: 10px;
+	color: black;
+
+	transition: background-color 0.1s;
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+	img {
+		height: 100%;
+		max-height: 100px;
+		aspect-ratio: 1 / 1;
+		object-fit: contain;
+		// filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+	}
+}
+
+.project_detail {
+	img.main {
+		max-height: 200px;
+		max-width: 200px;
+	}
+	.info {
+		display: flex;
+		gap: 10px;
+		h2 {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+		}
+		.tag {
+			display: block;
+			background-color: $blue;
+			font-size: 16px;
+			border-radius: 100px;
+			padding: 8px 12px;
+			color: white;
+			font-weight: 400;
+		}
+	}
+}

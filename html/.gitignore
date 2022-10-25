@@ -2,6 +2,7 @@
 /node_modules/
 /vendor/
 /src/uploads/*
+/src/files/*
 
 # Files
 *.lock

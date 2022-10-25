@@ -1,11 +1,1 @@
-main {
-  padding: 20px;
-}
-
-img {
-  max-height: 140px;
-  max-width: 140px;
-  object-fit: contain;
-}
-
-/*# sourceMappingURL=stats.css.map */
+main{padding:20px}main table{width:100%}img{max-height:140px;max-width:140px;object-fit:contain}@media screen and (max-width: 768px){main>div table th,main>div table td{font-size:10px}img{max-height:100px;max-width:100px;object-fit:contain}}

@@ -1,0 +1,215 @@
+.wrapper {
+  columns: 3 200px;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.wrapper > div {
+  margin: 0;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  break-inside: avoid;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #0d10d1;
+  background-color: white;
+  min-height: 70px;
+  transform: translateZ(0);
+  cursor: pointer;
+}
+.wrapper > div .tags {
+  transform: translateZ(0);
+  z-index: 10;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  display: flex;
+  gap: 8px;
+  pointer-events: none;
+}
+.wrapper > div .tags .tag {
+  display: block;
+  padding: 4px 8px;
+  color: white;
+  font-size: 10px;
+  border-radius: 4px;
+  background-color: #0d10d1;
+}
+.wrapper > div img,
+.wrapper > div video,
+.wrapper > div audio,
+.wrapper > div iframe {
+  grid-row: 1/-1;
+  grid-column: 1;
+  width: 100%;
+  z-index: 5;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+.wrapper > div iframe {
+  aspect-ratio: 2/3;
+  border-radius: 10px;
+  border: none;
+  transform: scale(1.02);
+  aspect-ratio: 100/141;
+}
+.wrapper > div .infos {
+  z-index: 10;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: #0d10d1;
+  font-size: 10px;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.wrapper > div .infos > div {
+  display: flex;
+  gap: 12px;
+}
+.wrapper > div .infos span {
+  word-break: break-word;
+  display: block;
+}
+.wrapper > div .infos a {
+  color: white;
+  font-size: 15px;
+}
+.wrapper > div .infos button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+.wrapper > div:hover img {
+  transform: scale(1.1);
+}
+.wrapper > div:hover .infos {
+  transform: translate3d(0, 0, 0);
+}
+
+.edit-menu {
+  box-shadow: 0px 0px 4px 0px #0d10d126;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 20px;
+}
+.edit-menu #file-preview {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-menu img,
+.edit-menu iframe,
+.edit-menu audio,
+.edit-menu video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: solid 1px #0d10d1;
+}
+.edit-menu audio {
+  border: none;
+}
+.edit-menu form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.edit-menu form input[type=checkbox] {
+  position: absolute;
+  left: -9999px;
+}
+.edit-menu form label {
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.edit-menu form input:checked + label,
+.edit-menu form label:hover {
+  background-color: #0d10d1;
+  color: white;
+}
+.edit-menu #name {
+  width: 100%;
+  box-shadow: none;
+  outline: none;
+  padding: 10px 0;
+  border-radius: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+#filelist {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+#filelist > div {
+  position: relative;
+  background-color: #0d10d188;
+  padding: 6px 10px;
+  border-radius: 100px;
+  color: white;
+  font-size: 10px;
+  overflow: hidden;
+}
+#filelist > div > div {
+  position: relative;
+}
+#filelist > div .bg {
+  height: 100%;
+  position: absolute;
+  background: #0d10d1;
+  top: 0;
+  left: 0;
+  width: 0%;
+  transition: width 1s;
+}
+
+#container {
+  display: flex;
+  gap: 10px;
+}
+#container #pickfiles,
+#container #uploadfiles {
+  display: block;
+  background-color: #0d10d1;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    columns: 2;
+  }
+}
+
+/*# sourceMappingURL=files.css.map */

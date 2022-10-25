@@ -28,7 +28,7 @@ include('../components/header.php');
           <?php
           require('../components/config.php');
 
-          $query = $conn->query('SELECT * FROM projects ORDER BY id DESC');
+          $query = $conn->query('SELECT * FROM cdc ORDER BY id DESC');
           while ($row = $query->fetch_assoc()) { ?>
             <tr>
               <td><?php echo $row['name'] ?></td>

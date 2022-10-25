@@ -1,14 +1,14 @@
 <?php
 $title = 'LMLC Communication';
 $css = 'home';
-include('../components/header.php');
+include(dirname(__DIR__, 1) . '/components/header.php');
 ?>
 <div class="page">
-  <?php require('../components/sidebar.php'); ?>
+  <?php require(dirname(__DIR__, 1) . '/components/sidebar.php'); ?>
 
   <main>
     <h1>Intranet LMLC Communication</h1>
   </main>
 </div>
 
-<?php require('../components/footer.php') ?>
+<?php require(dirname(__DIR__, 1) . '/components/footer.php') ?>

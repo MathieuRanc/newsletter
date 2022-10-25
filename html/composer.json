@@ -12,6 +12,13 @@
         }
     ],
     "require": {
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "php-ffmpeg/php-ffmpeg": "^1.0",
+        "spipu/html2pdf": "^5.2"
+    },
+    "config": {
+        "platform": {
+            "php": "8.0"
+        }
     }
 }

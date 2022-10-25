@@ -26,12 +26,11 @@ form.newsletter {
 .images_wrapper {
 	display: block;
 	overflow-x: scroll;
-	overflow-y: hidden;
 	white-space: nowrap;
 	gap: 10px;
 	width: calc(100% + 40px);
 	transform: translate3d(-20px, 0, 0);
-	padding: 0 20px;
+	padding: 4px 20px;
 	label:not(:last-child) {
 		margin-right: 10px;
 	}

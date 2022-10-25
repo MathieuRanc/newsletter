@@ -1,0 +1,54 @@
+$blue: #0d10d1;
+
+@import './gallery.scss';
+
+main {
+	padding: 20px;
+}
+
+#filelist {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 10px;
+	flex-wrap: wrap;
+	> div {
+		position: relative;
+		background-color: #0d10d188;
+		padding: 6px 10px;
+		border-radius: 100px;
+		color: white;
+		font-size: 10px;
+		overflow: hidden;
+		> div {
+			position: relative;
+		}
+		.bg {
+			height: 100%;
+			position: absolute;
+			background: #0d10d1;
+			top: 0;
+			left: 0;
+			width: 0%;
+			transition: width 1s;
+		}
+	}
+}
+#container {
+	display: flex;
+	gap: 10px;
+	#pickfiles,
+	#uploadfiles {
+		display: block;
+		background-color: $blue;
+		color: white;
+		padding: 8px 12px;
+		border-radius: 4px;
+	}
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+	.wrapper {
+		columns: 2;
+	}
+}

@@ -1,7 +1,7 @@
 <?php
 $title = "Mot de passer oublié | LMLC Communication";
 $css = "forgot";
-require('../components/header.php');
+require(dirname(__DIR__, 1) . '/components/header.php');
 ?>
 
 <main>
@@ -14,7 +14,7 @@ require('../components/header.php');
         <input type="submit" name="submit" value="Réinitialiser le mot de passe">
       </form>
       <?php } else {
-      require('../components/config.php');
+      require(dirname(__DIR__, 1) . '/components/config.php');
 
       $email = mysqli_real_escape_string($conn, $_POST['email']);
 
@@ -51,4 +51,4 @@ require('../components/header.php');
   </div>
 </main>
 
-<?php require('../components/footer.php') ?>
+<?php require(dirname(__DIR__, 1) . '/components/footer.php') ?>

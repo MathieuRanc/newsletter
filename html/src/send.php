@@ -52,9 +52,11 @@ $count = count($csv);
 require('../components/config.php');
 
 // insert values into database
-$query = "INSERT INTO messages (name, sent, image) VALUES ('$name', '$count', '$image')";
-$query = $conn->query($query);
+$query = "INSERT INTO stats (name, sent, image) VALUES ('$name', '$count', '$image')";
+$result = $conn->query($query);
+var_dump($result);
 $id = $conn->insert_id;
+var_dump($id);
 
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";

@@ -2,10 +2,37 @@ $blue: #0d10d1;
 
 main {
 	padding: 20px;
+	table {
+		width: 100%;
+	}
 }
 
 img {
 	max-height: 140px;
 	max-width: 140px;
 	object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+	// scrollable list
+	main {
+		> div {
+			// overflow: scroll;
+			// width: calc(100vw);
+			// padding: 0 20px;
+			// position: relative;
+			// left: -20px;
+			table {
+				th,
+				td {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+	img {
+		max-height: 100px;
+		max-width: 100px;
+		object-fit: contain;
+	}
 }

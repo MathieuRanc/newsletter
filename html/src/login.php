@@ -2,7 +2,7 @@
 $title = 'Login | LMLC Communication';
 $css = 'login';
 if (isset($_POST['username']) && isset($_POST['password'])) {
-  require('../components/config.php');
+  require(dirname(__DIR__, 1) . '/components/config.php');
 
   $username = mysqli_real_escape_string($conn, $_POST['username']);
   $password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -30,7 +30,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 }
 ?>
 
-<?php require('../components/header.php') ?>
+<?php require(dirname(__DIR__, 1) . '/components/header.php') ?>
 
 <main>
   <div class="image"></div>
@@ -51,4 +51,4 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   </div>
 </main>
 
-<?php require('../components/footer.php'); ?>
+<?php require(dirname(__DIR__, 1) . '/components/footer.php'); ?>

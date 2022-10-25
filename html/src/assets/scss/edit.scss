@@ -59,6 +59,10 @@ form {
 	flex-direction: column;
 	align-items: flex-start;
 	margin-right: auto;
+	width: 100%;
+	> div {
+		width: 100%;
+	}
 }
 
 .horizontal {
@@ -69,4 +73,13 @@ form {
 input[type='submit'] {
 	margin-left: 0;
 	margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+	.horizontal {
+		flex-direction: column;
+	}
+	form div {
+		width: 100%;
+	}
 }

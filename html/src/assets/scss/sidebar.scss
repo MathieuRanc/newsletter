@@ -92,7 +92,6 @@ label[for='burger'] {
 		}
 	}
 	nav {
-		padding-top: 60px;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -125,6 +124,7 @@ label[for='burger'] {
 			flex-direction: column;
 			gap: 20px;
 			width: 100%;
+			margin: auto 0;
 			> div,
 			> p {
 				font-weight: 600;
@@ -186,5 +186,26 @@ label[for='burger'] {
 	}
 	input:checked + label + nav {
 		transform: translateY(0);
+	}
+}
+
+@supports (-webkit-touch-callout: none) {
+	nav {
+		height: -webkit-fill-available;
+	}
+}
+
+@media screen and (max-height: 500px) and (min-width: 768px) {
+	nav {
+		height: 100vh;
+		a {
+			font-size: 12px;
+		}
+		a.logo {
+			margin: 0;
+		}
+		> div {
+			gap: 0;
+		}
 	}
 }

@@ -1,12 +1,12 @@
 <?php
 // insert project into database from post request
 if (isset($_POST['create'])) {
-  require('../components/config.php');
+  require(dirname(__DIR__, 1) . '/components/config.php');
   $name = mysqli_real_escape_string($conn, $_POST['name']);
   $description = mysqli_real_escape_string($conn, $_POST['description']);
   $status = mysqli_real_escape_string($conn, $_POST['status']);
 
-  $query = "INSERT INTO projects (name, description, status) VALUES ('$name', '$description', '$status')";
+  $query = "INSERT INTO cdc (name, description, status) VALUES ('$name', '$description', '$status')";
   if (mysqli_query($conn, $query)) {
     // refresh the page
     header('Location: specifications.php');
@@ -15,12 +15,12 @@ if (isset($_POST['create'])) {
 
 $title = 'LMLC Communication';
 $css = 'create';
-include('../components/header.php');
+include(dirname(__DIR__, 1) . '/components/header.php');
 ?>
 
 <div class="page">
   <!-- create a new project -->
-  <?php require('../components/sidebar.php'); ?>
+  <?php require(dirname(__DIR__, 1) . '/components/sidebar.php'); ?>
   <main>
     <h1>Créer un nouveau projet</h1>
     <div>
@@ -49,4 +49,4 @@ include('../components/header.php');
   </main>
 </div>
 
-<?php require '../components/footer.php'; ?>
+<?php require dirname(__DIR__, 1) . '/components/footer.php'; ?>

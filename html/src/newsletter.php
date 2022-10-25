@@ -2,6 +2,7 @@
 $title = 'Newsletter | LMLC Communication';
 $css = 'newsletter';
 include('../components/header.php');
+include('../components/config.php');
 ?>
 <div class="page">
   <?php require('../components/sidebar.php'); ?>
@@ -10,7 +11,7 @@ include('../components/header.php');
     <h1>Outil d'envoi de newsletter LMLC Communication</h1>
 
     <h2>Téléverser une nouvelle image</h2>
-    <form class="upload" action="upload.php" method="post" enctype="multipart/form-data">
+    <form class="upload" action="<?php echo $_ENV['HOSTNAME'] ?>upload.php" method="post" enctype="multipart/form-data">
       <div class="drop-down">
         <label for="upload">Téléversez un fichier (2 MB max)</label>
         <input type="file" name="upload" id="upload">

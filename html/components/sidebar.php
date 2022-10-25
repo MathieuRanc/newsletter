@@ -7,13 +7,15 @@
 <nav>
   <div>
     <a href="/" class="logo"><img src="../assets/images/download.svg" alt=""></a>
-    <p>Bonjour <?php echo $_SESSION['name'] ?></p>
+    <!-- <p>Bonjour <?php echo $_SESSION['name'] ?></p> -->
     <div>
       <a class="<?php echo in_array($_SERVER['REQUEST_URI'], array('/')) ? 'router-link-active' : '' ?>" href="/"><i class="fa-solid fa-house"></i>Tableau de bord</a>
       <a class="<?php echo in_array($_SERVER['REQUEST_URI'], array('/newsletter.php')) ? 'router-link-active' : '' ?>" href="/newsletter.php"><i class="fa-solid fa-paper-plane"></i>Newsletter</a>
       <a class="<?php echo in_array($_SERVER['REQUEST_URI'], array('/specifications.php', '/create.php', '/edit.php')) ? 'router-link-active' : '' ?>" href="/specifications.php"><i class="fa-solid fa-clipboard-list"></i></i>Cahier des charges</a>
       <a class="<?php echo in_array($_SERVER['REQUEST_URI'], array('/settings.php')) ? 'router-link-active' : '' ?>" href="/settings.php"><i class="fa-solid fa-gear"></i>Réglages</a>
       <a class="<?php echo in_array($_SERVER['REQUEST_URI'], array('/stats.php')) ? 'router-link-active' : '' ?>" href="/stats.php"><i class="fa-solid fa-chart-line"></i>Stastistiques</a>
+      <a class="<?php echo in_array($_SERVER['REQUEST_URI'], array('/files.php')) ? 'router-link-active' : '' ?>" href="/files.php"><i class="fa-solid fa-hard-drive"></i>Fichiers</a>
+      <a class="<?php echo in_array($_SERVER['REQUEST_URI'], array('/projects')) ? 'router-link-active' : '' ?>" href="/projects"><i class="fa-solid fa-hammer"></i>Projets</a>
     </div>
   </div>
   <a class="logout" href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i> Déconnexion</a>
